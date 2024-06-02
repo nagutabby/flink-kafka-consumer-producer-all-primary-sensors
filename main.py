@@ -174,7 +174,6 @@ def get_kafka_producer(source, metrics):
             elif 'RPR0521RS' in source:
                 topic = f'{TOPIC_TEAM_PREFIX}-analytics-team2_RPR0521RS_min-ambient_illumination'
 
-    print(topic)
     kafka_producer = FlinkKafkaProducer(
         topic,
         SimpleStringSchema(),
