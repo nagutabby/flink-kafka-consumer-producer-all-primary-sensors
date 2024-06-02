@@ -48,7 +48,7 @@ config.set_integer('parallelism.default', 1)
 config.set_integer('taskmanager.numberOfTaskSlots', 2)
 
 env = StreamExecutionEnvironment.get_execution_environment(config)
-env.add_jars('file:///Users/nagutabby/flink-1.19.0/opt/flink-sql-connector-kafka-3.1.0-1.18.jar')
+env.add_jars('file:///Users/nagutabby/flink-1.18.1/opt/flink-sql-connector-kafka-3.1.0-1.18.jar')
 
 def create_data_stream_and_sink_back(topic):
     unix_timestamp_five_minutes_ago_s = datetime.timestamp(datetime.now() - timedelta(minutes=5))
