@@ -33,7 +33,7 @@ class CustomProcessWindowFunction(ProcessWindowFunction[tuple, tuple, str, TimeW
 
         sink_messages = []
         for primary_source, values in dict_primary_sources.items():
-            if ('gen-data' not in primary_source):
+            if 'gen-data' not in primary_source:
                 primary_sink_average, primary_sink_max, primary_sink_min = get_primary_sink(primary_source)
                 average_value = round(sum(values) / len(values), 1)
                 max_value = round(max(values), 1)
